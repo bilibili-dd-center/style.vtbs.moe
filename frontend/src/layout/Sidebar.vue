@@ -7,7 +7,7 @@
       active-text-color="rgb(64, 158, 255)"
       :default-active="$route.path"
     >
-      <el-menu-item index="/">
+      <el-menu-item disabled>
         <i class="el-icon-s-home"></i>{{$t('sidebar.home')}}
       </el-menu-item>
       <el-menu-item :index="$router.resolve({name: 'stylegen'}).href">
