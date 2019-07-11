@@ -7,10 +7,10 @@ import axios from 'axios'
 
 import App from './App.vue'
 import Layout from './layout'
-import Home from './views/Home.vue'
+// import Home from './views/Home.vue'
 import StyleGenerator from './views/StyleGenerator'
 import Room from './views/Room.vue'
-import NotFound from './views/NotFound.vue'
+// import NotFound from './views/NotFound.vue'
 
 import zh from './lang/zh'
 import ja from './lang/ja'
@@ -33,15 +33,15 @@ const router = new VueRouter({
   mode: 'history',
   routes: [
     {
-      path: '/',
+      path: '*',
       component: Layout,
       children: [
-        {path: '', component: Home},
-        {path: 'stylegen', name: 'stylegen', component: StyleGenerator}
+        // {path: '', component: Home},
+        {path: '', name: 'stylegen', component: StyleGenerator}
       ]
     },
     {path: '/room/:roomId', name: 'room', component: Room},
-    {path: '*', component: NotFound}
+    {path: '*', component: StyleGenerator}
   ]
 })
 
