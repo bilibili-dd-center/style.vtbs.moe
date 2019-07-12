@@ -9,7 +9,7 @@ import App from './App.vue'
 import Layout from './layout'
 // import Home from './views/Home.vue'
 import StyleGenerator from './views/StyleGenerator'
-import Room from './views/Room.vue'
+// import Room from './views/Room.vue'
 // import NotFound from './views/NotFound.vue'
 
 import zh from './lang/zh'
@@ -37,11 +37,11 @@ const router = new VueRouter({
       component: Layout,
       children: [
         // {path: '', component: Home},
-        {path: '', name: 'stylegen', component: StyleGenerator}
+        {path: '*', name: 'stylegen', component: StyleGenerator}
       ]
     },
-    {path: '/room/:roomId', name: 'room', component: Room},
-    {path: '*', component: StyleGenerator}
+    // {path: '/room/:roomId', name: 'room', component: Room},
+    // {path: '*', component: StyleGenerator}
   ]
 })
 
